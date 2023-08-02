@@ -1,9 +1,19 @@
+@import './variables';
+
 html {
   font-size: 67.5%;
+}
+
+body {
+  font-size: $size-md;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+li {
+  list-style: none;
 }
