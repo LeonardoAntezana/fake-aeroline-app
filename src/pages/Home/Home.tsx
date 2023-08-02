@@ -1,9 +1,10 @@
+import { FlightPicker } from "./components";
 
 const Home = () => {
-
 	return (
 		<div>
-			Home
+			{/* CREATE A CAROUSEL */}
+			<FlightPicker items={[{name: 'argentina'}, {name: 'brasil'}]}/>
 		</div>
 	);
 };
