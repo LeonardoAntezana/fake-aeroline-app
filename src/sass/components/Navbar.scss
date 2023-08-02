@@ -1,0 +1,22 @@
+@import '../variables'; 
+
+.navbar {
+  &__container {
+    background-color: $color-dark;
+    color: $color-white;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+    border-radius: 3rem;
+    .container__links{
+      display: flex;
+      .navbar__links {
+        padding: 0 1rem;
+      }
+      .dropMenu {
+        padding: 0 1rem;
+      }
+    }
+  }
+}
