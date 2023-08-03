@@ -3,28 +3,26 @@ import { FormControl, InputLabel, MenuItem, Select, SelectChangeEvent } from "@m
 import { Destination } from "../../../models";
 
 interface Props {
+  title: string;
   items: Destination[];
   className?: string;
 }
 
-const FlightPicker: FC<Props> = ({ items, className }) => {
+const FlightPicker: FC<Props> = ({ title, items, className }) => {
   const [country, setCountry] = useState<string>('')
 
   const onChange = (event: SelectChangeEvent) => setCountry(event.target.value);
 
   return (
     <FormControl fullWidth className={className ?? ''}>
-      <InputLabel id="originLabel">Origen</InputLabel>
+      <InputLabel id="originLabel">{title}</InputLabel>
       <Select
         labelId="originLabel"
         value={country}
         label="Origen"
         onChange={onChange}
       >
-        {items?.map((option, index) => <MenuItem value={option.name} key={index}>{option.name}</MenuItem>)}
-        {/* <MenuItem value={10}>Ten</MenuItem>
-        <MenuItem value={20}>Twenty</MenuItem>
-        <MenuItem value={30}>Thirty</MenuItem> */}
+        {items?.map((option, index) => <MenuItem value={option.name} key={index}>{option.name} ({option.acronym})</MenuItem>)}
       </Select>
     </FormControl>
   )

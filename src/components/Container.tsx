@@ -1,8 +1,10 @@
 import { FC, ReactNode } from "react"
 import '../sass/components/Container.scss'
 
+type ChildrenNode = ReactNode | ReactNode[]; 
+
 interface Props {
-  children: ReactNode[];
+  children: ChildrenNode;
   className?: string;
 }
 

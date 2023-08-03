@@ -1,11 +1,12 @@
-import { FlightPicker } from "./components";
+import { FlightPickerContainer } from "./components";
+import { Container } from "../../components";
+import '../../sass/pages/Home.scss'
 
 const Home = () => {
 	return (
-		<div>
-			{/* CREATE A CAROUSEL */}
-			<FlightPicker items={[{name: 'argentina'}, {name: 'brasil'}]}/>
-		</div>
+		<Container className="home">
+			<FlightPickerContainer/>
+		</Container>
 	);
 };
 
