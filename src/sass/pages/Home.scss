@@ -1,0 +1,18 @@
+@import '../variables';
+
+.home {
+  display: flex;
+  
+  .container__pickers {
+    // background-color: $color-dark;
+    max-width: 80%;
+    margin: auto;
+    padding: 2rem;
+    display: flex;
+    gap: 1rem;
+    border-radius: 1.2rem;
+    .picker {
+      min-width: 40rem;
+    }
+  }
+}
